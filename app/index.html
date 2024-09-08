@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gartic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <div id="server-setup-container" class="card">
+      <h2>连接服务器</h2>
+      <input type="text" id="server-address" placeholder="请输入服务器地址"
+             onkeyup="detectEnter(event, connectToServer)">
+      <button onclick="connectToServer()">连接</button>
+    </div>
+    <div id="login-container" class="card hidden">
+      <h2>登录</h2>
+      <input type="password" id="password" placeholder="请输入密码" onkeyup="detectEnter(event, login)">
+      <button onclick="login()">登录</button>
+    </div>
+    <div id="username-container" class="card hidden">
+      <h2>设置用户名</h2>
+      <input type="text" id="username" placeholder="请输入用户名"
+             onkeyup="detectEnter(event, setUsername)">
+      <button onclick="setUsername()">提交</button>
+    </div>
+    <div id="game-container" class="hidden">
+      <div id="users-list" class="card">
+        <h3>玩家</h3>
+        <ul id="usernames"></ul>
+      </div>
+      <div id="drawing-container" class="card">
+        <h3 id="drawing-title">画板</h3>
+        <div id="controls" class="hidden">
+          <label for="color-picker">颜色:</label>
+          <input type="color" id="color-picker" value="#000000">
+          <label for="brush-size">笔刷粗细:</label>
+          <input type="range" id="brush-size" min="1" max="10" value="2">
+          <button id="clear-canvas" onclick="clearCanvas()" style="margin-left: 18px;">清空</button>
+        </div>
+        <canvas id="drawing-board" width="500" height="400"></canvas>
+        <div id="timer-bar-container" class="hidden">
+          <div id="timer-bar"></div>
+        </div>
+      </div>
+      <div id="chat-container" class="card">
+        <h3>聊天</h3>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="输入消息..."
+               onkeyup="detectEnter(event, sendChat)">
+        <button onclick="sendChat()">发送</button>
+      </div>
+      <div id="guess-container" class="card">
+        <h3>猜测</h3>
+        <div id="guess-chat-box"></div>
+        <input type="text" id="guess-input" placeholder="输入你的猜测..."
+               onkeyup="detectEnter(event, sendGuess)">
+        <button id="guess-button" onclick="sendGuess()">提交</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

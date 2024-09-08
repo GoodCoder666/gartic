@@ -1,0 +1,157 @@
+/* CSS for Gartic UI
+   Copyright (c) 2024 GoodCoder666
+   MIT License */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#content {
+  width: 90%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.correct-guess {
+  color: #059f40;
+  font-weight: bold;
+}
+
+.close-guess {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#chat-box,
+#guess-chat-box {
+  border: 1px solid #ddd;
+  height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+#users-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 80px);
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h2, h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.game-container {
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-columns: 3fr 4fr 4fr;
+  gap: 20px;
+}
+
+#users-list {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+#drawing-container {
+  grid-row: 1;
+  grid-column: 2 / -1;
+}
+
+#chat-container {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+#guess-container {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#drawing-board {
+  border: 1px solid black;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#controls label {
+  margin-right: 10px;
+}
+
+#controls input[type="color"] {
+  margin-right: 20px;
+}
+
+#controls input[type="range"] {
+  width: 150px;
+}
+
+#timer-bar-container {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#timer-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #ff6347; /* Timer fill color */
+  transition: width 0.2s linear;
+}
