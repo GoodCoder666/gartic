@@ -1,6 +1,8 @@
 # Gartic
 
-简单的你画我猜游戏。inspired by gartic.io
+简单的你画我猜游戏。
+
+> *Inspired by gartic.io*.
 
 ## 设置 WebSocket 服务器
 
